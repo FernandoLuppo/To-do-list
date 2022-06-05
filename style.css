@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #058a08;
+    background: linear-gradient(45deg, #333333 0%, #dd1818 100%);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #1b1b1b;
+}
+
+header > img {
+    width: 50px;
+}
+
+/* -------------------------  containet-new-tesk -------------------------*/
+
+section {
+    flex-grow: 1;
+}
+
+
+#border {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    margin: auto;
+    margin-top: 80px;
+    border: solid 3px #333333;
+    border-radius: 5px;
+    padding: 50px 0px 50px 0px;
+}
+
+#containet-new-tesk {
+    padding: 30px;
+    background-color: #333333;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+}
+
+#containet-new-tesk > input {
+    margin-right: 30px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#containet-new-tesk > button {
+    padding: 10px;
+    font-weight: bold;
+    border: solid 1px #41b883;
+    border-radius: 5px;
+    background-color: #41b883;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* ------------------------- container-task -------------------------*/
+
+.container-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 600px;
+    height: 70px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 40px;
+    background-color: #333333;    
+    color: #ffffff;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.container-task > .x {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 25px;
+    border: 0px solid;
+    color:#ffffff;
+    background-color: #333333;
+    transition: 0.2s;
+}
+
+.container-task > .x:hover {
+    color: #f02323;
+    cursor: pointer;
+}
+
+.container-task > p {
+    width: 470px;
+    font-size: 17px;
+    margin-left: -10px;
+}
+
+.container-task > .text {
+    width: 20px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.container-task > input[type='checkbox']:checked + p {
+    text-decoration: line-through;
+    color: #999999;
+}
+
+/* ------------------------- Footer -------------------------*/
+
+footer {
+    text-align: center;
+    font-weight: bolder;
+    padding: 10px;
+    color: #1b1b1b;
+}
+
+/* ------------------------- screen > 715px -------------------------*/
+
+@media screen and (max-width: 715px) {
+
+    header > img {
+        display: flex;
+        order: 1;
+    }
+
+    #border{
+        width: 320px;
+    }
+
+    #containet-new-tesk {
+        padding: 13px;
+        display: flex;        
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #containet-new-tesk > input {
+        margin: 0px;
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    .container-task {
+        width: 300px;
+        height: 55px;
+        padding: 0;
+    }
+
+    .container-task > .x {
+        margin-right: 20px;
+    }
+
+    .container-task > p {
+        width: 200px;
+        font-size: 15px;
+        margin-left: 0px;
+    }
+    
+    .container-task > input[type='checkbox'] {
+        margin-left: 12px;
+    }
+
+}
