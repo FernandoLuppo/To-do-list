@@ -1,4 +1,4 @@
-let todoList = document.getElementById("todo-list")
+let todoList = document.getElementById("todo-list");
 let addTask = document.getElementById("add-task");
 
 let banc = [];
@@ -25,7 +25,7 @@ let makeItem =  function(task, status, index) {
 let cleaningTask = function() {
     let cleaningTodoList = todoList;
     while(cleaningTodoList.firstChild) {
-        cleaningTodoList.removeChild(cleaningTodoList.lastChild)
+        cleaningTodoList.removeChild(cleaningTodoList.lastChild);
     }
 }
 
@@ -37,48 +37,48 @@ let rander = function() {
 
 let insertItemKeyBoard = function(event) {
 
-    let tecla = event.key
-    let text = addTask.value
+    let tecla = event.key;
+    let text = addTask.value;
     if(tecla === "Enter"){
-        let banc = getBanc()
-        banc.push({"task" : text, "status" : ""})
-        setBanc(banc)
-        rander()
-        addTask.value = ""}
+        let banc = getBanc();
+        banc.push({"task" : text, "status" : ""});
+        setBanc(banc);
+        rander();
+        addTask.value = "";}
     
 }
 
 let insertItem = function() {
-    let text = addTask.value
-    let banc = getBanc()
+    let text = addTask.value;
+    let banc = getBanc();
     banc.push({"task" : text, "status" : ""})
-    setBanc(banc)
-    rander()
-    addTask.value = ""
+    setBanc(banc);
+    rander();
+    addTask.value = "";
 }
 
 let removeItem = function(index) {
-    let banc = getBanc()
-    banc.splice (index, 1)
-    setBanc(banc)
-    rander()
+    let banc = getBanc();
+    banc.splice (index, 1);
+    setBanc(banc);
+    rander();
 }
 
 let atualizeItems = function(index) {
-    let banc = getBanc()
+    let banc = getBanc();
     banc[index].status = banc[index].status === "" ? "checked" : "";
-    setBanc(banc)
-    rander()
+    setBanc(banc);
+    rander();
 }
 
 let clickItem = function(event) {
-    let eventTarget = event.target
+    let eventTarget = event.target;
     if(eventTarget.type === "button") {
-        let index =  eventTarget.dataset.index
-        removeItem(index)
+        let index =  eventTarget.dataset.index;
+        removeItem(index);
     } else if (eventTarget.type === "checkbox") {
-        let index = eventTarget.dataset.index
-        atualizeItems(index)
+        let index = eventTarget.dataset.index;
+        atualizeItems(index);
     }
 }
 
@@ -86,8 +86,8 @@ addTask.addEventListener("keypress",insertItemKeyBoard);
 todoList.addEventListener("click", clickItem);
 
 function addNewTask() {
-    insertItem()
-    rander()
+    insertItem();
+    rander();
 }
 
-rander()
+rander();
